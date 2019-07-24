@@ -1,0 +1,9 @@
+<h2>제품 상세페이지</h2>
+
+<div *ngIf="product">
+  <h3>{{ product.name }}</h3>
+  <!-- Comma Pipe 기능 사용하기 -->
+  <h4>{{ product.price | comma }}</h4>
+  <p>{{ product.description }}</p>
+  <button (click)="addToCart(product)">장바구니 추가</button>
+</div>

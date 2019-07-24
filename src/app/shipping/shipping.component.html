@@ -1,0 +1,7 @@
+<h3>배송비용 안내</h3>
+
+<!-- async 파이프를 사용하여 json배송비용정보를 출력한다. -->
+<div class="shipping-item" *ngFor="let shipping of shippingCosts | async">
+  <span>{{ shipping.type }} </span>
+  <span>{{ shipping.price | comma }}</span>
+</div>
